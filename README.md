@@ -1,1 +1,3 @@
-"# projeto-cd" 
+O SQL para ser importado no seu MySQL está no arquivo banco.sql
+
+Se atente para os detalhes deste código. Ele foi feito de forma bem básica para explicitar cada conceito...

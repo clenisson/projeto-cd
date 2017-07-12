@@ -1,7 +1,5 @@
 <?php
 $db = new PDO('mysql:host=localhost;dbname=logica_cd_curso;charset=utf8mb4', 'root', '123');
-$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-$db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
 ?>
 
 <a href="criar.php">Criar curso</a> <br/>
@@ -12,5 +10,6 @@ foreach($db->query('SELECT * FROM logica_cd_curso.cursos;') as $row) {
 	$nomeDoCurso = $row['nome'];
 	
     echo $idDoCurso . ' ' .$nomeDoCurso;
+    echo " <a href='editar.php?id=$idDoCurso'>Editar</a> - <a href='excluir.php?id=$idDoCurso'>Excluir</a>";
 	echo "<br>";
 }
